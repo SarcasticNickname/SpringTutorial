@@ -4,7 +4,9 @@ import org.springframework.context.annotation.*;
 
 public class MainApp {
 	public static void main(String [] args) {
-	ApplicationContext  ctx = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
-	HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
+	ApplicationContext ctx = 
+			new AnnotationConfigApplicationContext(TextEditorConfig.class);
+	TextEditor txt = ctx.getBean(TextEditor.class);
+	txt.spellCheck();
 	}
 }
